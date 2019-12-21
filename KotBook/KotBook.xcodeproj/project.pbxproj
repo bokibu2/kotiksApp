@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		109B579FE4C0DB609DA8E779 /* Pods_KotBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14107053844EFA32B78AE1BF /* Pods_KotBook.framework */; };
 		FBCC073123ADFFB300CE4FEF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCC073023ADFFB300CE4FEF /* AppDelegate.swift */; };
 		FBCC073323ADFFB300CE4FEF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCC073223ADFFB300CE4FEF /* SceneDelegate.swift */; };
 		FBCC073523ADFFB300CE4FEF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCC073423ADFFB300CE4FEF /* ViewController.swift */; };
@@ -16,6 +17,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		14107053844EFA32B78AE1BF /* Pods_KotBook.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KotBook.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB16894B01115F606E78AE69 /* Pods-KotBook.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KotBook.release.xcconfig"; path = "Target Support Files/Pods-KotBook/Pods-KotBook.release.xcconfig"; sourceTree = "<group>"; };
+		F38FA18B80E06939449E1226 /* Pods-KotBook.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KotBook.debug.xcconfig"; path = "Target Support Files/Pods-KotBook/Pods-KotBook.debug.xcconfig"; sourceTree = "<group>"; };
 		FBCC072D23ADFFB300CE4FEF /* KotBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KotBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBCC073023ADFFB300CE4FEF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FBCC073223ADFFB300CE4FEF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -31,17 +35,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				109B579FE4C0DB609DA8E779 /* Pods_KotBook.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		76199D1E6E1FEA930AE69473 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F38FA18B80E06939449E1226 /* Pods-KotBook.debug.xcconfig */,
+				EB16894B01115F606E78AE69 /* Pods-KotBook.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		BF5CC8E73BB394B6CA30A92C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				14107053844EFA32B78AE1BF /* Pods_KotBook.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		FBCC072423ADFFB300CE4FEF = {
 			isa = PBXGroup;
 			children = (
 				FBCC072F23ADFFB300CE4FEF /* KotBook */,
 				FBCC072E23ADFFB300CE4FEF /* Products */,
+				76199D1E6E1FEA930AE69473 /* Pods */,
+				BF5CC8E73BB394B6CA30A92C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,9 +98,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FBCC074123ADFFB400CE4FEF /* Build configuration list for PBXNativeTarget "KotBook" */;
 			buildPhases = (
+				0A22688859DC102CA9F01398 /* [CP] Check Pods Manifest.lock */,
 				FBCC072923ADFFB300CE4FEF /* Sources */,
 				FBCC072A23ADFFB300CE4FEF /* Frameworks */,
 				FBCC072B23ADFFB300CE4FEF /* Resources */,
+				50304A62D89D235E4652DBE4 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,6 +158,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0A22688859DC102CA9F01398 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-KotBook-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		50304A62D89D235E4652DBE4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KotBook/Pods-KotBook-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KotBook/Pods-KotBook-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-KotBook/Pods-KotBook-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		FBCC072923ADFFB300CE4FEF /* Sources */ = {
@@ -282,9 +350,11 @@
 		};
 		FBCC074223ADFFB400CE4FEF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F38FA18B80E06939449E1226 /* Pods-KotBook.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9D23PN4MJW;
 				INFOPLIST_FILE = KotBook/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -299,9 +369,11 @@
 		};
 		FBCC074323ADFFB400CE4FEF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EB16894B01115F606E78AE69 /* Pods-KotBook.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9D23PN4MJW;
 				INFOPLIST_FILE = KotBook/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
