@@ -6,5 +6,5 @@ target 'KotBook' do
   use_frameworks!
 
   # Pods for KotBook
-   pod 'FolioReaderKit'
+   pod 'FolioReaderKit', :git => 'https://github.com/evilutioner/FolioReaderKit.git'
 end
