@@ -37,7 +37,7 @@ class Book {
 		saveBookEntity(dictionaryKey: name, dictionaryValue: author, key: "author")
 	}
 	
-	// MARK: Method that allows to save any entity to User Defaults as Dictionary
+	// MARK: Universal method that allows to save any entity to User Defaults as Dictionary
 	func saveBookEntity(dictionaryKey: String, dictionaryValue: String, key: String) {
 		
 		if let existEntity = UserDefaults.standard.object(forKey: key) {
@@ -45,7 +45,7 @@ class Book {
 			var entity = existEntity as! [String: String]
 			entity[dictionaryKey] = dictionaryValue
 			UserDefaults.standard.set(entity, forKey: key)
-
+			
 		} else {
 			
 			let newEntity = [dictionaryKey : dictionaryValue]
