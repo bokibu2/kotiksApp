@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="e44-jU-uUU">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
@@ -16,16 +16,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="imageView:yZD-mn-0fU:image" translatesAutoresizingMaskIntoConstraints="NO" id="yZD-mn-0fU">
-                                <rect key="frame" x="118.5" y="194" width="177" height="185"/>
+                                <rect key="frame" x="118.5" y="194" width="177" height="184"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Read books with ePub" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G1S-pV-Vvy">
-                                <rect key="frame" x="122" y="531.5" width="170" height="21"/>
+                                <rect key="frame" x="122" y="530.5" width="170" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Books ePub" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QvE-J9-ieC">
-                                <rect key="frame" x="146" y="477" width="122" height="26.5"/>
+                                <rect key="frame" x="146" y="476" width="122" height="26.5"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -155,6 +155,9 @@
                                 <state key="normal" title="Next" backgroundImage="button">
                                     <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 </state>
+                                <connections>
+                                    <segue destination="6zi-tA-O2e" kind="show" id="yhP-eM-bO1"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -175,6 +178,62 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Oqc-rE-zhO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1786.9565217391305" y="-113.16964285714285"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="kEd-Vg-qqf">
+            <objects>
+                <viewController id="6zi-tA-O2e" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="UXG-7w-HWf">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="landing4" translatesAutoresizingMaskIntoConstraints="NO" id="d8k-eZ-4dr">
+                                <rect key="frame" x="91.5" y="150" width="231" height="150"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reading offline" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dfc-s4-e24">
+                                <rect key="frame" x="129" y="398" width="156" height="26.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Read book when you don't have access to internet" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zy5-Dt-O5C">
+                                <rect key="frame" x="82" y="452.5" width="250" height="41"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="ema-3Z-1NF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f9P-ri-94x">
+                                <rect key="frame" x="146" y="759" width="128" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="EiV-gK-5YV"/>
+                                    <constraint firstAttribute="width" constant="128" id="loO-3t-Zq6"/>
+                                </constraints>
+                                <state key="normal" title="Start reading" backgroundImage="button">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Dfc-s4-e24" firstAttribute="top" secondItem="d8k-eZ-4dr" secondAttribute="bottom" constant="98" id="0os-Y9-MVh"/>
+                            <constraint firstItem="iaw-6Y-Erm" firstAttribute="bottom" secondItem="f9P-ri-94x" secondAttribute="bottom" constant="15" id="6O4-b2-L47"/>
+                            <constraint firstItem="d8k-eZ-4dr" firstAttribute="top" secondItem="iaw-6Y-Erm" secondAttribute="top" constant="150" id="DZG-Cq-fuc"/>
+                            <constraint firstItem="f9P-ri-94x" firstAttribute="leading" secondItem="iaw-6Y-Erm" secondAttribute="leading" constant="146" id="F4t-8H-UXr"/>
+                            <constraint firstItem="zy5-Dt-O5C" firstAttribute="centerX" secondItem="UXG-7w-HWf" secondAttribute="centerX" id="YTs-J9-a1c"/>
+                            <constraint firstItem="zy5-Dt-O5C" firstAttribute="top" secondItem="Dfc-s4-e24" secondAttribute="bottom" constant="28" id="cZ8-rH-oWB"/>
+                            <constraint firstItem="d8k-eZ-4dr" firstAttribute="centerX" secondItem="UXG-7w-HWf" secondAttribute="centerX" id="mxd-fn-i9B"/>
+                            <constraint firstItem="Dfc-s4-e24" firstAttribute="centerX" secondItem="UXG-7w-HWf" secondAttribute="centerX" id="rS2-lV-crP"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="iaw-6Y-Erm"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="aOT-cO-Lbo"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MXn-nu-1JZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2576.811594202899" y="-113.16964285714285"/>
         </scene>
     </scenes>
     <resources>
@@ -30954,5 +31013,6 @@ KXUAHCmCABwphwAcKY8AHCmSABwplwAcKZ8AAAAAAAAEAQAAAAAAAABuAAAAAAAAAAAAAAAAABwpog
         </image>
         <image name="landing2" width="224" height="202.5"/>
         <image name="landing3" width="202" height="234"/>
+        <image name="landing4" width="231" height="149.5"/>
     </resources>
 </document>
