@@ -9,12 +9,13 @@
 /* Begin PBXBuildFile section */
 		109B579FE4C0DB609DA8E779 /* Pods_KotBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14107053844EFA32B78AE1BF /* Pods_KotBook.framework */; };
 		C605BCC523AE14E70076ACA4 /* Landing.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C605BCC423AE14E70076ACA4 /* Landing.storyboard */; };
+		C605BCC723B402100076ACA4 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C605BCC623B402100076ACA4 /* MainViewController.swift */; };
 		FB7F968F23AF798F008BA11B /* ReaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7F968E23AF798F008BA11B /* ReaderViewController.swift */; };
 		FB9234E723B0C9E9008FF939 /* BookSample.epub in Resources */ = {isa = PBXBuildFile; fileRef = FB7F969023AF7B82008BA11B /* BookSample.epub */; };
 		FBA269EB23B390BC004FD15D /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA269EA23B390BC004FD15D /* Book.swift */; };
 		FBCC073123ADFFB300CE4FEF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCC073023ADFFB300CE4FEF /* AppDelegate.swift */; };
 		FBCC073323ADFFB300CE4FEF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCC073223ADFFB300CE4FEF /* SceneDelegate.swift */; };
-		FBCC073523ADFFB300CE4FEF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCC073423ADFFB300CE4FEF /* ViewController.swift */; };
+		FBCC073523ADFFB300CE4FEF /* LandingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCC073423ADFFB300CE4FEF /* LandingViewController.swift */; };
 		FBCC073823ADFFB300CE4FEF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FBCC073623ADFFB300CE4FEF /* Main.storyboard */; };
 		FBCC073A23ADFFB400CE4FEF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FBCC073923ADFFB400CE4FEF /* Assets.xcassets */; };
 		FBCC073D23ADFFB400CE4FEF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FBCC073B23ADFFB400CE4FEF /* LaunchScreen.storyboard */; };
@@ -23,6 +24,7 @@
 /* Begin PBXFileReference section */
 		14107053844EFA32B78AE1BF /* Pods_KotBook.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KotBook.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C605BCC423AE14E70076ACA4 /* Landing.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Landing.storyboard; sourceTree = "<group>"; };
+		C605BCC623B402100076ACA4 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		EB16894B01115F606E78AE69 /* Pods-KotBook.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KotBook.release.xcconfig"; path = "Target Support Files/Pods-KotBook/Pods-KotBook.release.xcconfig"; sourceTree = "<group>"; };
 		F38FA18B80E06939449E1226 /* Pods-KotBook.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KotBook.debug.xcconfig"; path = "Target Support Files/Pods-KotBook/Pods-KotBook.debug.xcconfig"; sourceTree = "<group>"; };
 		FB7F968E23AF798F008BA11B /* ReaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReaderViewController.swift; sourceTree = "<group>"; };
@@ -31,7 +33,7 @@
 		FBCC072D23ADFFB300CE4FEF /* KotBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KotBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBCC073023ADFFB300CE4FEF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FBCC073223ADFFB300CE4FEF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		FBCC073423ADFFB300CE4FEF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FBCC073423ADFFB300CE4FEF /* LandingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingViewController.swift; sourceTree = "<group>"; };
 		FBCC073723ADFFB300CE4FEF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FBCC073923ADFFB400CE4FEF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FBCC073C23ADFFB400CE4FEF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -90,11 +92,12 @@
 			children = (
 				FBCC073023ADFFB300CE4FEF /* AppDelegate.swift */,
 				FBCC073223ADFFB300CE4FEF /* SceneDelegate.swift */,
-				FBCC073423ADFFB300CE4FEF /* ViewController.swift */,
 				FBA269EA23B390BC004FD15D /* Book.swift */,
 				FB7F968E23AF798F008BA11B /* ReaderViewController.swift */,
 				FBCC073623ADFFB300CE4FEF /* Main.storyboard */,
+				C605BCC623B402100076ACA4 /* MainViewController.swift */,
 				C605BCC423AE14E70076ACA4 /* Landing.storyboard */,
+				FBCC073423ADFFB300CE4FEF /* LandingViewController.swift */,
 				FBCC073923ADFFB400CE4FEF /* Assets.xcassets */,
 				FBCC073B23ADFFB400CE4FEF /* LaunchScreen.storyboard */,
 				FBCC073E23ADFFB400CE4FEF /* Info.plist */,
@@ -220,9 +223,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FBCC073523ADFFB300CE4FEF /* ViewController.swift in Sources */,
+				FBCC073523ADFFB300CE4FEF /* LandingViewController.swift in Sources */,
 				FBCC073123ADFFB300CE4FEF /* AppDelegate.swift in Sources */,
 				FBCC073323ADFFB300CE4FEF /* SceneDelegate.swift in Sources */,
+				C605BCC723B402100076ACA4 /* MainViewController.swift in Sources */,
 				FBA269EB23B390BC004FD15D /* Book.swift in Sources */,
 				FB7F968F23AF798F008BA11B /* ReaderViewController.swift in Sources */,
 			);
