@@ -31,17 +31,17 @@ class ReaderViewController: UIViewController {
 		}
 	}
 	
-	//	MARK: Method to get Book Path form UserDefaults
+	/// Method to get Book Path form UserDefaults
 	func getBookPath(_ name: String) -> String {
 		return getBookEntity(dictionaryKey: name, key: "path")
 	}
 	
-	//	MARK: Method to get Book Author form UserDefaults
+	/// Method to get Book Author form UserDefaults
 	func getAuthorPath(_ name: String) -> String {
 		return getBookEntity(dictionaryKey: name, key: "author")
 	}
 	
-	// MARK: Universal method that allows to get any entity form UserDefaults as String
+	/// Universal method that allows to get any entity form UserDefaults as String
 	func getBookEntity(dictionaryKey: String, key: String) -> String {
 		
 		if let existEntity = UserDefaults.standard.object(forKey: key) {
@@ -53,4 +53,6 @@ class ReaderViewController: UIViewController {
 			return "Entity not found"
 		}
 	}
+	
+	
 }
