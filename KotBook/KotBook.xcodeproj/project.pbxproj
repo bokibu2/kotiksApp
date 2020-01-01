@@ -14,7 +14,6 @@
 		FB9234E723B0C9E9008FF939 /* BookSample.epub in Resources */ = {isa = PBXBuildFile; fileRef = FB7F969023AF7B82008BA11B /* BookSample.epub */; };
 		FBA269EB23B390BC004FD15D /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA269EA23B390BC004FD15D /* Book.swift */; };
 		FBCC073123ADFFB300CE4FEF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCC073023ADFFB300CE4FEF /* AppDelegate.swift */; };
-		FBCC073323ADFFB300CE4FEF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCC073223ADFFB300CE4FEF /* SceneDelegate.swift */; };
 		FBCC073523ADFFB300CE4FEF /* LandingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCC073423ADFFB300CE4FEF /* LandingViewController.swift */; };
 		FBCC073823ADFFB300CE4FEF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FBCC073623ADFFB300CE4FEF /* Main.storyboard */; };
 		FBCC073A23ADFFB400CE4FEF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FBCC073923ADFFB400CE4FEF /* Assets.xcassets */; };
@@ -32,7 +31,6 @@
 		FBA269EA23B390BC004FD15D /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
 		FBCC072D23ADFFB300CE4FEF /* KotBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KotBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBCC073023ADFFB300CE4FEF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FBCC073223ADFFB300CE4FEF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		FBCC073423ADFFB300CE4FEF /* LandingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingViewController.swift; sourceTree = "<group>"; };
 		FBCC073723ADFFB300CE4FEF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FBCC073923ADFFB400CE4FEF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -91,7 +89,6 @@
 			isa = PBXGroup;
 			children = (
 				FBCC073023ADFFB300CE4FEF /* AppDelegate.swift */,
-				FBCC073223ADFFB300CE4FEF /* SceneDelegate.swift */,
 				FBA269EA23B390BC004FD15D /* Book.swift */,
 				FB7F968E23AF798F008BA11B /* ReaderViewController.swift */,
 				FBCC073623ADFFB300CE4FEF /* Main.storyboard */,
@@ -225,7 +222,6 @@
 			files = (
 				FBCC073523ADFFB300CE4FEF /* LandingViewController.swift in Sources */,
 				FBCC073123ADFFB300CE4FEF /* AppDelegate.swift in Sources */,
-				FBCC073323ADFFB300CE4FEF /* SceneDelegate.swift in Sources */,
 				C605BCC723B402100076ACA4 /* MainViewController.swift in Sources */,
 				FBA269EB23B390BC004FD15D /* Book.swift in Sources */,
 				FB7F968F23AF798F008BA11B /* ReaderViewController.swift in Sources */,
@@ -376,6 +372,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9D23PN4MJW;
 				INFOPLIST_FILE = KotBook/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -395,6 +392,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9D23PN4MJW;
 				INFOPLIST_FILE = KotBook/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

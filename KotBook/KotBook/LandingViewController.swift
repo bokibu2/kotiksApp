@@ -9,13 +9,16 @@
 import UIKit
 
 
-class LandingViewController: MainViewController {
+class LandingViewController: UIViewController {
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		// Do any additional setup after loading the view.
+        UserDefaults.standard.set(true, forKey: "landingShowed")
 	}
-
-
+    
+    @IBAction func startReadingAction(_ sender: Any) {
+        let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController()
+        (UIApplication.shared.delegate as? AppDelegate)?.window?.rootViewController = viewController
+    }
 }
 
