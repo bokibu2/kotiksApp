@@ -21,6 +21,7 @@ PODS:
 
 DEPENDENCIES:
   - FolioReaderKit (from `https://github.com/evilutioner/FolioReaderKit.git`)
+  - RealmSwift
 
 SPEC REPOS:
   trunk:
@@ -53,6 +54,6 @@ SPEC CHECKSUMS:
   SSZipArchive: 14401ade5f8e82aba1ff03e9f88e9de60937ae60
   ZFDragableModalTransition: 0d294eaaba6edfcb9839595de765f9ca06a4b524
 
-PODFILE CHECKSUM: e7784d8b7150c1a47b06a3b0c262a8043fbf4f9c
+PODFILE CHECKSUM: d70221dab2b56dcaba5a56122ff9e5086e34fd11
 
 COCOAPODS: 1.8.4

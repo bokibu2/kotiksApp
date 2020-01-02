@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		109B579FE4C0DB609DA8E779 /* Pods_KotBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14107053844EFA32B78AE1BF /* Pods_KotBook.framework */; };
+		7C07C98523BDE18D00231980 /* BookEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C07C98423BDE18D00231980 /* BookEntity.swift */; };
+		7C07C98723BDE62500231980 /* NowReadingDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C07C98623BDE62500231980 /* NowReadingDataSource.swift */; };
+		7C2D8C8123BDE93300CE5EAE /* SmallBookCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2D8C8023BDE93300CE5EAE /* SmallBookCollectionViewCell.swift */; };
 		C605BCC523AE14E70076ACA4 /* Landing.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C605BCC423AE14E70076ACA4 /* Landing.storyboard */; };
 		C605BCC723B402100076ACA4 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C605BCC623B402100076ACA4 /* MainViewController.swift */; };
 		FB7F968F23AF798F008BA11B /* ReaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7F968E23AF798F008BA11B /* ReaderViewController.swift */; };
@@ -22,6 +25,9 @@
 
 /* Begin PBXFileReference section */
 		14107053844EFA32B78AE1BF /* Pods_KotBook.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KotBook.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7C07C98423BDE18D00231980 /* BookEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookEntity.swift; sourceTree = "<group>"; };
+		7C07C98623BDE62500231980 /* NowReadingDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowReadingDataSource.swift; sourceTree = "<group>"; };
+		7C2D8C8023BDE93300CE5EAE /* SmallBookCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallBookCollectionViewCell.swift; sourceTree = "<group>"; };
 		C605BCC423AE14E70076ACA4 /* Landing.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Landing.storyboard; sourceTree = "<group>"; };
 		C605BCC623B402100076ACA4 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		EB16894B01115F606E78AE69 /* Pods-KotBook.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KotBook.release.xcconfig"; path = "Target Support Files/Pods-KotBook/Pods-KotBook.release.xcconfig"; sourceTree = "<group>"; };
@@ -59,6 +65,16 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		7C2D8C8223BDE96C00CE5EAE /* MainScreen */ = {
+			isa = PBXGroup;
+			children = (
+				C605BCC623B402100076ACA4 /* MainViewController.swift */,
+				7C07C98623BDE62500231980 /* NowReadingDataSource.swift */,
+				7C2D8C8023BDE93300CE5EAE /* SmallBookCollectionViewCell.swift */,
+			);
+			path = MainScreen;
+			sourceTree = "<group>";
+		};
 		BF5CC8E73BB394B6CA30A92C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -88,17 +104,18 @@
 		FBCC072F23ADFFB300CE4FEF /* KotBook */ = {
 			isa = PBXGroup;
 			children = (
+				7C2D8C8223BDE96C00CE5EAE /* MainScreen */,
 				FBCC073023ADFFB300CE4FEF /* AppDelegate.swift */,
 				FBA269EA23B390BC004FD15D /* Book.swift */,
 				FB7F968E23AF798F008BA11B /* ReaderViewController.swift */,
 				FBCC073623ADFFB300CE4FEF /* Main.storyboard */,
-				C605BCC623B402100076ACA4 /* MainViewController.swift */,
 				C605BCC423AE14E70076ACA4 /* Landing.storyboard */,
 				FBCC073423ADFFB300CE4FEF /* LandingViewController.swift */,
 				FBCC073923ADFFB400CE4FEF /* Assets.xcassets */,
 				FBCC073B23ADFFB400CE4FEF /* LaunchScreen.storyboard */,
 				FBCC073E23ADFFB400CE4FEF /* Info.plist */,
 				FB7F969023AF7B82008BA11B /* BookSample.epub */,
+				7C07C98423BDE18D00231980 /* BookEntity.swift */,
 			);
 			path = KotBook;
 			sourceTree = "<group>";
@@ -220,9 +237,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7C07C98723BDE62500231980 /* NowReadingDataSource.swift in Sources */,
 				FBCC073523ADFFB300CE4FEF /* LandingViewController.swift in Sources */,
+				7C07C98523BDE18D00231980 /* BookEntity.swift in Sources */,
 				FBCC073123ADFFB300CE4FEF /* AppDelegate.swift in Sources */,
 				C605BCC723B402100076ACA4 /* MainViewController.swift in Sources */,
+				7C2D8C8123BDE93300CE5EAE /* SmallBookCollectionViewCell.swift in Sources */,
 				FBA269EB23B390BC004FD15D /* Book.swift in Sources */,
 				FB7F968F23AF798F008BA11B /* ReaderViewController.swift in Sources */,
 			);
@@ -377,6 +397,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				OTHER_SWIFT_FLAGS = "$(inherited) -D COCOAPODS";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kotiki.KotBook;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -397,6 +418,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				OTHER_SWIFT_FLAGS = "$(inherited) -D COCOAPODS";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kotiki.KotBook;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
