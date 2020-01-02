@@ -7,6 +7,7 @@ target 'KotBook' do
 
   # Pods for KotBook
    pod 'FolioReaderKit', :git => 'https://github.com/evilutioner/FolioReaderKit.git'
+   pod 'RealmSwift'
 end
 
 post_install do |installer|

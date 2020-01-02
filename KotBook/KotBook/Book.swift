@@ -17,16 +17,13 @@ class Book {
 	//	TODO: Create func that find (get) name of the book (API get or ect.)
 	
 	/// Method required for find File Path in app. Need to update if the directory of stored files will be updated.
-	func findBookPath(_ name: String) {
+	class func findBookPath(_ name: String) -> String? {
 		
-		let bookNameSeparated = name.components(separatedBy: ".")
-		let fileExtention = bookNameSeparated[bookNameSeparated.count - 1]
-		let bookName = name.components(separatedBy: ".\(fileExtention)")[0]
+		let pathSeparated = name.components(separatedBy: CharacterSet(charactersIn: "./"))
+        guard pathSeparated.count >= 2 else { return nil }
 		
-		if let filePath = Bundle.main.path(forResource: bookName, ofType: fileExtention){
-			path = filePath
-		}
-	}
+        return Bundle.main.path(forResource: pathSeparated[pathSeparated.count - 2], ofType: pathSeparated.last)
+    }
 	
 	/// Method on save Book Name & Book Path to UserDafaults
 	func saveBookPath(_ name: String,_ path: String) {
